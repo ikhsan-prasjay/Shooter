@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Mencegah scrolling pada body */
+            background-color: #000000; /* Warna latar belakang body, bisa disesuaikan */
+        }
+        #game-container {
+            width: 100vw;  /* Mengisi 100% lebar viewport */
+            height: 100vh; /* Mengisi 100% tinggi viewport */
+            display: flex; /* Untuk memusatkan canvas di dalamnya */
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            display: block; /* Menghilangkan margin bawah default pada canvas */
+        }
+    </style>
+    <script>
+        // Variabel global atau konfigurasi game
+        var layoutSize = { 'w': 768, 'h': 1024 }; // Ukuran desain asli game Anda
+        
+        // Define X_POSITION and Y_POSITION relative to the original design size
+        // This makes sure your positioning logic remains consistent with your original design
+        var X_POSITION = {
+            CENTER: layoutSize.w / 2,
+            LEFT: layoutSize.w * 0.1, // Contoh: 10% dari lebar
+            RIGHT: layoutSize.w * 0.9 // Contoh: 90% dari lebar
+        };
+        var Y_POSITION = {
+            CENTER: layoutSize.h / 2,
+            TOP: layoutSize.h * 0.1, // Contoh: 10% dari tinggi
+            BOTTOM: layoutSize.h * 0.9 // Contoh: 90% dari tinggi
+        };
+
+        var currentHero = 0;
+        var countHero = 2;
+        var snd_touch = null; // Ini mungkin perlu didefinisikan di dalam scene jika tidak digunakan secara global
+        var soundEnabled = true; // default ON
+    </script>
+    <script src="sceneMenu.js"></script>
+    <script src="scenePilihHero.js"></script>
+    <script src="scenePlay.js"></script>
+    <script src="sceneGameOver.js"></script>
+    <title>Shooter Game</title>
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <script>
+        const config = {
+            type: Phaser.AUTO,
+            // Gunakan ukuran 'dasar' atau 'desain' game Anda di sini.
+            // Phaser akan menskalakan ini ke layar sebenarnya.
+            width: layoutSize.w,
+            height: layoutSize.h,
+            scene: [sceneMenu, scenePilihHero, scenePlay, sceneGameOver],
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    debug: false // Atur ke true untuk melihat batasan fisika
+                }
+            },
+            scale: {
+                mode: Phaser.Scale.FIT, // Game akan diskalakan agar muat di layar sambil mempertahankan rasio aspek
+                autoCenter: Phaser.Scale.CENTER_BOTH, // Pusatkan game di layar
+                parent: 'game-container', // Tempatkan canvas di dalam div ini
+                expandParent: true // Biarkan div parent mengisi seluruh ruang yang tersedia
+            }
+        };
+
+        const game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
