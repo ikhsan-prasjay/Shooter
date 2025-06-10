@@ -34,10 +34,10 @@ cd shooter-game
 - **CSS3** - Styling
 
 ##cuplikan layar
-![image](https://github.com/user-attachments/assets/2c5b6348-2f62-45bb-9797-5e6e97d0d715)
-![image](https://github.com/user-attachments/assets/682b13af-40f5-400c-822d-7591b844a5b0)
-![image](https://github.com/user-attachments/assets/b1b6e291-9c64-4a95-ae45-2b797941535d)
-![image](https://github.com/user-attachments/assets/3cf5868c-2fd5-4ea4-977b-c08d3861f5e0)
+![Screenshot (2)](https://github.com/user-attachments/assets/a77e76b5-9c89-473a-9709-b8443fc6d133)
+![Screenshot (3)](https://github.com/user-attachments/assets/b8129f36-e983-439e-9587-985ecf89a726)
+![Screenshot (4)](https://github.com/user-attachments/assets/6a8bbd72-ec6e-4591-92e3-f54251b4f2bc)
+![Screenshot (5)](https://github.com/user-attachments/assets/69b1dc10-50b7-4236-a3e0-e800cac40601)
 
 
 
