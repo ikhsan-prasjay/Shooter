@@ -33,7 +33,8 @@ cd shooter-game
 - **HTML5** - Markup language
 - **CSS3** - Styling
 
-##cuplikan layar
+## cuplikan layar
+
 ![Screenshot (2)](https://github.com/user-attachments/assets/a77e76b5-9c89-473a-9709-b8443fc6d133)
 ![Screenshot (3)](https://github.com/user-attachments/assets/b8129f36-e983-439e-9587-985ecf89a726)
 ![Screenshot (4)](https://github.com/user-attachments/assets/6a8bbd72-ec6e-4591-92e3-f54251b4f2bc)
